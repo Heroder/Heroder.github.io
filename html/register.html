@@ -91,9 +91,11 @@
             },
             success:function(res){
                     if(res.code==1){
+                        alert('登录成功')
                         // 登录成功，信息添加到本地存储，方便同域名下的其他页面访问
                         localStorage.setItem('name',$('.cell-phone').val());
                         location.href = "../index.html"
+                        
                     }
                 }
            })

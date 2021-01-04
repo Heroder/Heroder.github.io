@@ -140,15 +140,17 @@
     </div>
     <div class="hr"></div>
     <!-- 放大镜 -->
-    <div id="glass" class="common">
+    <div id="glass">
         <div class="glass-left">
             <div class="glass-img">
                 <a href="#">
-                    <img src="https://res.vmallres.com/pimages//product/6941487211210/group//428_428_7668BAE5887869E84E875A6EE73058F8AF3E94BAEE1C465D.png" alt="">
+                    <img src="https://res.vmallres.com/pimages//product/6901443381654/428_428_40621108946B8FCC27EEF879B08E04E5516FB9465EEE4BFAmp.png" alt="">
                 </a>
                 <!-- 模板 -->
                 <div class="glass-zomm-lens"></div>
-                <div class="glass-zoom-big"></div>
+                <div class="glass-zoom-big">
+                    <img src="https://res.vmallres.com/pimages//product/6941487211210/group//800_800_028F9FE8B15A8D90FF0C49FB7C36E97F6FFDBAC1C3F0F633.png" alt="" class="bigimg">
+                </div>
             </div>
             <!--  -->
             <div class="product-gallery">
@@ -191,17 +193,128 @@
             </div>
         </div>
         <div class="glass-right">
-            <div>
+            <div class="product-meta">
                 <h1>HUAWEI nova 8 8GB+128GB 全网通版（亮黑色）</h1>
                 <div class="product-slogan">
                 <span>10:08限时开售！</span>
                 <span>66W华为超级快充，90Hz OLED曲面屏，麒麟985 5G SoC芯片，6400万魅力四摄，<br>纤薄机身，3D石墨烯散热</span>
-               </div>
-               <div class="product-info">
-
-               </div>
+               </div>       
             </div>
+            <!--  -->
+            <div class="product-info">
+                 <div class="product-info-list clearfix">
+                     <label>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</label>
+                     <span class="product-prom-word">
+                         <em>￥</em>
+                         7388.00
+                     </span>
+                 </div>
+                 <div class="product-prom-item clearfix">
+                    <label>促&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</label>
+                   <div class="product-prom">
+                      <div class="product-parts-specially">
+                          <em class="tag">一站式换新</em>
+                          <div class="product-prom-con">
+                            <span class="product-prom-word">以旧换新最高补贴500元 </span>
+                        </div>
+                      </div>
+                      <div class="product-parts-specially">
+                        <em class="tag">一站式换新</em>
+                        <div class="product-prom-con">
+                          <span class="product-prom-word">以旧换新最高补贴500元 </span>
+                      </div>
+                    </div>
+                    <div class="product-parts-specially">
+                        <em class="tag">一站式换新</em>
+                        <div class="product-prom-con">
+                          <span class="product-prom-word">以旧换新最高补贴500元 </span>
+                      </div>
+                    </div>
+                   </div>
+                   
+                 </div>
+               
+            </div>
+            <!--  -->
+            <div class="hr"></div>
+            <!-- 商品介绍 -->
+            <div class="product-description">
+                <label>服务说明</label>
+                <div class="f1">
+                    <ul class="product-description-list">
+                        <li>已满48元已免运费</li>
+                        <li>已满48元已免运费</li>
+                        <li>已满48元已免运费</li>
+                        <li>已满48元已免运费</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product-description">
+                <label>服务说明</label>
+                <div class="f1">
+                    <ul class="product-description-list">
+                        <li>已满48元已免运费</li>
+                        <li>已满48元已免运费</li>
+                        <li>已满48元已免运费</li>
+                        <li>已满48元已免运费</li>
+                    </ul>
+                </div>
+            </div>
+            <!--  -->
+            <div class="hr1"></div>
+            <div class="line"></div>
         </div>
     </div>
+    <script src="../js/public.js"></script>
+<script>
+     //获取相关元素
+    var box=document.getElementById('glass')//总容器
+	var small=document.querySelector('.glass-img')//小图片所在的盒子
+	var mask=document.querySelector('.glass-zomm-lens')//遮罩层
+	var big=document.querySelector('.glass-zoom-big')//大图片所在的盒子
+	var bigImg=document.querySelector('.bigimg')
+    //1 鼠标移入small,big显示,mask显示
+    small.onmouseover=function(){
+		   big.style.display="block";
+		   mask.style.display="block"
+	   }
+     //2 mask跟着鼠标移动，鼠标在mask中心位置
+     console.log(box)
+     small.onmousemove=function(e){
+            e=e||window.event;
+			var left = e.clientX+getScroll().left - box.offsetLeft;
+			var top = e.clientY+getScroll().top-box.offsetTop;
+			// 鼠标在mask中心，减去mask宽高的一半
+			left = left-mask.offsetWidth/2;
+			top = top-mask.offsetHeight/2;
+			//边界处理
+			if(left<0){
+				left=0
+			}
+			if(top<0){
+				top=0
+			}
+			if(left>small.offsetWidth-mask.offsetWidth){
+				left=small.offsetWidth-mask.offsetWidth
+			}
+			if(top>small.offsetHeight-mask.offsetHeight){
+				top=small.offsetHeight-mask.offsetHeight
+			}
+			//定位元素
+			mask.style.left=left+'px';
+			mask.style.top=top+'px';
+		   //3 mask对应的大图位置显示
+		   var x=left/small.offsetWidth*bigImg.offsetWidth;
+		   var y=top/small.offsetHeight*bigImg.offsetHeight;
+		    bigImg.style.marginLeft = -x+"px";
+			bigImg.style.marginTop = -y+"px";
+	   }
+	   //4 鼠标移出small,big隐藏,mask隐藏
+	   small.onmouseout=function(){
+		   big.style.display="none"
+		   mask.style.display="none"
+	   }
+      
+</script>
 </body>
 </html>
