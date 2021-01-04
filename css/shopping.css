@@ -1,0 +1,133 @@
+.hr{
+    height: 10px;
+}
+.breadcrumb-area{
+    /* margin-left: 1px; */
+    line-height: 1.5;
+    padding-top: 10px;
+    color: #333333;
+}
+.breadcrumb-area a{
+    color: #666666;
+}
+/* 放大镜 */
+.glass-left{
+    float: left;
+}
+.glass-img{
+    position: relative;
+}
+.glass-img a{
+    display: block;
+}
+.glass-img a img{
+    vertical-align: top;
+    width: 450px;
+    height: 450px
+}
+.product-gallery{
+    width: 450px;
+    height: 68px;
+    margin-top: 18px;
+    position: relative;
+}
+.product-gallery-back{
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 68px;
+}
+.product-gallery-dis{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 68px;
+}
+.product-gallery-dis::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-top: 19px;
+    background: url(https://res8.vmallres.com/20201208/images/echannel/icon/icon50.png) no-repeat -48px -29px;
+    background-position: -78px -29px;
+}
+.product-gallery-back::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-top: 19px;
+    background: url(https://res8.vmallres.com/20201208/images/echannel/icon/icon50.png) no-repeat -48px -29px;
+}
+.product-gallery-thumbs{
+    width: 370px;
+    height: 68px;
+    margin-left: 40px;
+    overflow: hidden;
+    position: relative;
+}
+.product-gallery-thumbs .nt{
+    width: 500%;
+    height: 68px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.product-gallery-thumbs .nt li{
+    float: left;
+    padding: 0 3px;
+}
+.product-gallery-thumbs .nt li a{
+    display: block;
+    width: 66px;
+    height: 66px;
+    border: 1px solid #fff;
+}
+.product-gallery-thumbs .nt li a img{
+    vertical-align: top;
+    width: 60px;
+    height: 60px;
+    margin: 3px 0 0 3px;
+}
+.glass-zomm-lens{
+    z-index: 98;
+    position: absolute;
+    width: 225px;
+    height: 225px;
+    opacity: 0.5;
+    left: 225px;
+    top: 0px;
+    background-position: -225px 0px;
+    border: 1px solid #888;
+    margin: -4px;
+    background-color: #fff;
+    cursor: move;
+}
+/* 放大镜 */
+.glass-zoom-big{
+    position: absolute;
+    left: 460px;
+    top: 0px;
+    width: 400px;
+    height: 400px;
+    background-image: url(https://res.vmallres.com/pimages//product/6941487211210/group//800_800_028F9FE8B15A8D90FF0C49FB7C36E97F6FFDBAC1C3F0F633.png);
+    z-index: 99;
+    background-position: -399px -134px;
+    border: 2px solid #ccc;
+    overflow: hidden;
+    background-color: #FFF;
+    display: none;
+}
+.glass-right{
+    float: right;
+}
+.product-slogan{
+    font-size: 14px;
+    padding-right: 40px;
+    margin-bottom: 12px;
+    position: relative;
+    top: -3px;
+    line-height: 20px;
+}
