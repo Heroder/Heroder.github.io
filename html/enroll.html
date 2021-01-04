@@ -26,34 +26,62 @@
        <div class="main-top">
            <span>华为账号注册</span>
            <span>已有账号</span>
-           <a href="../html/register .html">去登录</a>
+           <a href="../html/register.html">去登录</a>
         </div>
            <div class="main-center">
            <form action="">
-               <input type="text" placeholder="国家/地区">
+               <input type="text" placeholder="国家/地区" value="">
                <input type="text" placeholder="请输入手机号" class="phone">
-               <span>手机号必须是11位的数字</span>
+               <span class="span1">手机号必须是11位的数字</span>
                <input type="text" placeholder=" 短信验证码">
-               <input type="text" placeholder="密码">
+               <input type="text" placeholder="密码" class="pw">
                <span>密码必须是8-12的字母,数字或者特殊符号</span>
                <input type="text" placeholder="确认密码">
-               <input type="text"  placeholder="出生日期" class="pla">
-               <input type="button" value="注册">
+               <input type="text"  placeholder="出生日期" >
+               <input type="button" value="注册" class="reg">
            </form>
        </div>
        
    </div>
   <script src="../js/jquery1.12.4.min.js"></script>
-  <script>
-   $('.phone').oninput=function(){
-       var reg=/^\w{11}$/;
-       var the=$('.phone').val
+  <!-- <script>
+      console.log( $('.phone'))
+      $('.phone').bind(function(){
+        var reg=/^\w{8,11}$/;
+       var the=$('.phone').val();
        if(reg.test(the)){
-           
+           $('.span1').text("符合要求")
+           $('.span1').css('background','greed')
+           return true;
+       }else{
+           $('.span1').text("不符合要求")
+           $('.span1').css('background','red')
+           return false;
        }
-   }
+      })
+  </script> -->
+  
+ <script>
+     $('.reg').click(function(){
+        $.ajax({
+            url:"../js/enroll.json",
+            data:{
+                un:$('.phone').val(),
+                pw:$('.pw').val()
+            },
+            dataType:"json",
+            success:function(res){
+                console.log(res)
+                if(res.code==1){
+                    localStorage.setItem('name',$('.phone').val());
+                    location.href = "./register.html"
+                }
+                
+            }
+        })
+     })
   </script>
-
+ 
 
 
 
