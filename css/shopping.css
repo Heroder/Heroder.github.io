@@ -241,3 +241,129 @@
     background: #ddd;
     border-bottom: 1px solid #ddd;
 }
+.product-choose label{
+    float: left;
+    width: 85px;
+    text-indent: 10px;
+    line-height: 40px;
+}
+.product-choose-detail {
+    float: left;
+    width: 605px;
+}
+.product-choose-detail ul{
+    width: 605px;
+}
+.product-choose-detail ul li{
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.product-choose-detail ul li a{
+    display: block;
+    border: 1px solid #a4a4a4;
+    text-align: center;
+    height: 38px;
+    border-radius: 2px;
+    position: relative;
+    padding: 0 12px;
+}
+.product-choose-detail ul li a img{
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-top: 4px;
+}
+.product-choose-detail ul li a p{
+    height: 34px;
+    overflow: hidden;
+    float: left;
+    margin-top: 3px;
+    margin-left: 6px;
+}
+.product-choose-detail ul li a span {
+    height: 34px;
+    line-height: 17px;
+    min-width: 0;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.product-operation{
+    margin-top: 10px;
+}
+.product-stock{
+    float: left;
+    border: 1px solid #d6d6d6;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+.product-stock-text{
+    float: left;
+    width: 41px;
+    height: 44px;
+    line-height: 44px;
+    border: 0;
+    font-size: 18px;
+    text-align: center;
+    border-right: 1px solid #e2e2e2;
+}
+.product-stock-btn{
+    width: 21px;
+    float: left;
+}
+.product-stock-btn a{
+    display: block;
+    font-size: 16px;
+    width: 21px;
+    height: 21px;
+    line-height: 22px;
+    text-align: center;
+    color: #777;
+    font-weight: bold;
+}
+.product-stock-btn a:first-child {
+    border-bottom: 1px solid #e2e2e2;
+}
+.pro-operation{
+    float: left;
+    display: block;
+    background: #efb8bb;
+    width: 172px;
+    height: 46px;
+    font-size: 18px;
+    line-height: 46px;
+    text-align: center;
+   
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+}
+.pro-operation a{
+    color: #fff;
+}
+.countdown{
+    width: 168px;
+    float: left;
+    margin-left: 10px;
+}
+.countdown  span{
+    width: 46px;
+    height: 46px;
+    background: #605751;
+    color: #fff;
+    font-size: 24px;
+    line-height: 46px;
+    float: left;
+    text-align: center;
+}
+.countdown i{
+    width: 15px;
+    float: left;
+    height: 46px;
+    line-height: 46px;
+    color: #605751;
+    font-size: 28px;
+    font-style: normal;
+    text-align: center;
+}

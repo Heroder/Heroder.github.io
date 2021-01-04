@@ -263,6 +263,148 @@
             <!--  -->
             <div class="hr1"></div>
             <div class="line"></div>
+            <div class="hr1"></div>
+            <div class="pro-skus">
+                <dl class="product-choose clearfix">
+                    <label >选择颜色</label>
+                    <div class="product-choose-detail ">
+                        <ul>
+                            <li>
+                                <div class="sku">
+                                    <a href="#">
+                                        <img src="https://res.vmallres.com/pimages//product/6901443381494/40_40_EE0830231483A4C3B1D7CAB975049B85AEEE2B6CAE79B1A7mp.png" alt="">
+                                        <p><span>亮黑色</span></p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sku">
+                                    <a href="#">
+                                        <img src="https://res.vmallres.com/pimages//product/6901443381494/40_40_EE0830231483A4C3B1D7CAB975049B85AEEE2B6CAE79B1A7mp.png" alt="">
+                                        <p><span>亮黑色</span></p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sku">
+                                    <a href="#">
+                                        <img src="https://res.vmallres.com/pimages//product/6901443381494/40_40_EE0830231483A4C3B1D7CAB975049B85AEEE2B6CAE79B1A7mp.png" alt="">
+                                        <p><span>亮黑色</span></p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sku">
+                                    <a href="#">
+                                        <img src="https://res.vmallres.com/pimages//product/6901443381494/40_40_EE0830231483A4C3B1D7CAB975049B85AEEE2B6CAE79B1A7mp.png" alt="">
+                                        <p><span>亮黑色</span></p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sku">
+                                    <a href="#">
+                                        <img src="https://res.vmallres.com/pimages//product/6901443381494/40_40_EE0830231483A4C3B1D7CAB975049B85AEEE2B6CAE79B1A7mp.png" alt="">
+                                        <p><span>亮黑色</span></p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </dl>
+                <dl class="product-choose clearfix">
+                    <label >选择版本</label>
+                    <div class="product-choose-detail ">
+                        <ul>
+                            <li>
+                                <div class="sku">
+                                    <a href="#">
+                                       
+                                        <p><span>5G全网通 8GB+128GB</span></p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sku">
+                                    <a href="#"  class="inp">
+                                        <p><span>5G全网通 8GB+256GB</span></p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sku">
+                                    <a href="#">
+                                     
+                                        <p><span>5G全网通 8GB+512GB</span></p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </dl>
+                <dl class="product-choose clearfix">
+                    <label >选择套餐</label>
+                    <div class="product-choose-detail ">
+                        <ul>
+                            <li>
+                                <div class="sku">
+                                    <a href="#">
+                                       
+                                        <p><span>官方标配</span></p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </dl>
+                <dl class="product-choose clearfix">
+                    <label >增值业务</label>
+                    <div class="product-choose-detail ">
+                        <ul>
+                            <li>
+                                <div class="sku">
+                                    <a href="#">
+                                       
+                                        <p><span>无增值服务</span></p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sku">
+                                    <a href="#"  class="inp">
+                                        <p><span>华为礼品包装服务（礼品封套+明信片）</span></p>
+                                    </a>
+                                </div>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    
+                </dl>
+            </div>
+            <!-- 商品数量 -->
+            <div class="product-operation">
+                <div class="product-stock">
+                    <input type="text" placeholder="1" value="1" class="product-stock-text">
+                    <p class="product-stock-btn">
+                        <a href="#" id="disabled">+</a>
+                        <a href="#" id="disableb">-</a>
+                    </p>
+                </div>
+                <div class="pro-operation">
+                    <a href="#">立即申购</a>
+                </div>
+                <div class="countdown clearfix">
+                    <span id="t1">00</span>
+                    <i>:</i>
+                    <span id="t2">00</span>
+                    <i>:</i>
+                    <span id="t3">00</span>
+                </div>
+            </div>
         </div>
     </div>
     <script src="../js/public.js"></script>
@@ -314,7 +456,27 @@
 		   big.style.display="none"
 		   mask.style.display="none"
 	   }
-      
+    //秒杀功能
+    function toTime(){
+        var time=new Date() //当前时间
+        var hour=time.getHours()//当前小时
+        var minute=time.getMinutes()//当前分钟
+        var seconds = time.getSeconds()//当前秒
+        $id('t1').innerHTML=hour;
+        if(minute<10){
+            $id('t2').innerHTML=0+hour;
+        }else{
+            $id('t2').innerHTML=hour;
+        }
+        if(seconds<10){
+            $id('t3').innerHTML=0+hour;
+        }else{
+            $id('t3').innerHTML=seconds;
+        }
+    }
+    toTime()
+    setInterval(toTime,1000)
+    //购物车
 </script>
 </body>
 </html>
