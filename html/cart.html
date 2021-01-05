@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/reset.css">
+   
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+        <!-- 导航栏 -->
+        <div id="navi">
+            <div class="common">
+                <ul class="s-sub">
+                    <li><a href="../index.html">首页</a></li>
+                    <li><a href="#">华为官网</a></li>
+                    <li><a href="#">荣耀官网</a></li>
+                    <li><a href="#">花粉俱乐部</a></li>
+                    <li><a href="#">V码(优购码)</a></li>
+                    <li><a href="#">企业购</a></li>
+                    <li><a href="#">Select Region</a></li>
+                    <li class="s-dom">
+                        <div class="h">
+                            <a href="#" class="icon-dropdown">更多精彩</a>
+                        </div>
+                        <dl class="shortcut-menu">
+                            <dt><a href="">EMUI</a></dt>
+                            <dt><a href="">应用市场</a></dt>
+                            <dt><a href="">华为终端云空间</a></dt>
+                            <dt><a href="">开发者联明</a></dt>
+                        </dl>
+                    </li>
+                </ul>
+                <ul class="s-main">
+                    <li><a href="./html/register.html">请登录</a></li>
+                    <li><a href="./html/enroll.html">注册</a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li class="menu-one">
+                        <div class="h">
+                            <a href="#" class="icon-dropdown">客户服务</a>
+                        </div>
+                        <dl class="menu-two">
+                            <dt><a href="#">服务中心</a></dt>
+                            <dt><a href="#">联系客服</a></dt>
+                        </dl>
+                    </li>
+                    <li class="menu-seven">
+                        <div class="h">
+                            <a href="#" class="icon-dropdown">网站导航</a>
+                        </div>
+                        <div class="f">
+                            <a href="">
+                                <dl class="picture">
+                                    <dt></dt>
+                                    <dd>商城首页</dd>
+                                </dl>
+                            </a>
+                            <dl class="channel">
+                                <dt>频道</dt>
+                                <a href="#">华为专区</a>
+                                <a href="#">荣耀专区</a><br />
+                                <a href="#">企业购</a>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="menu-four">
+                        <div class="h">
+                            <a href="#" class="icon-dropdown">手机版</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 头部 -->
+         <div id="header" class="common">
+         <div class="logo">
+            <a href=""><img src="https://res.vmallres.com/pimages//common/config/logo/SXppnESYv4K11DBxDFc2.png" alt=""></a>  
+         <!--    <span>我的购物车</span> -->
+         </div>
+        </div>
+    <!--  -->
+    <div class="layout">
+        <div class="login-prompt">         
+        您还没有登录！登录后可查看之前加入的商品
+        <a href="./register.html">登录</a>
+        </div>
+    </div>
+    <div class="hr"></div>
+    <!-- 购物车 -->
+    <div class="sc-list">
+        <div class="sc-pro-title clearfix">
+            <label class="checkbox">
+                <input readonly="readonly" class="vam checked">
+                全选
+            </label>
+            <ul class="clearfix">
+                <li>商品</li>
+                <li>单价</li>
+                <li>数量</li>
+                <li>小计</li>
+                <li>操作</li>
+            </ul>
+        </div>
+        <form action="">
+            <div class="sc-pro">
+                
+             <!--    <div class="sc-pro-list clearfix">
+                      <label class="checkbox" >
+                          <input readonly="readonly" class="vam checked">
+                      </label>
+                      <div class="sc-pro-area">
+                          <div class="sc-pro-main clearfix">
+                              <a href="#" class="p-img">
+                                  <img src="https://res.vmallres.com/pimages//product/6901443321209/428_428_03E36F3811C5C3E97E89CB7C6CD937E843B234BADFEE705Fmp.png" alt="">
+                              </a>
+                              <ul>
+                                  <li>
+                                      <a href="#" class="p-name">华为平板 M5 青春版 8.0英寸智能平板电脑 4GB+64GB 全网通版（香槟金）智慧语音声控学生平板 麒麟710芯片 哈曼卡顿调音 多重护眼儿童学习平板</a>
+                                      <p class="p-info">香槟金 全网通 4GB+64GB</p>
+                                      <div class="p-label">
+                                          <span>分期免息</span>
+                                      </div>
+                                  </li>
+                                  <li>
+                                      <div class="p-price">
+                                          <span>¥ 1599.00</span>
+                                      </div>
+                                  </li>
+                                  <li>
+                                      <div class="p-stock">
+                                          <div class="p-stock-area">
+                                              <input type="number" class="p-stock-text">
+                                              <p class="p-stock-btn"> 
+                                                 <a href="#">+</a>
+                                                 <a href="#">-</a>
+                                              </p>
+                                          </div>
+                                      </div>
+                                  </li>
+                                  <li class="p-price-total">
+                                    ¥ 3198.00
+                                  </li>
+                                  <li>
+                                      <a href="#" class="p-del">删除</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                </div> -->
+            </div>
+        </form>
+    </div>
+
+
+<script src="../js/jquery1.12.4.min.js"></script>
+<script>
+    if(localStorage.getItem('goods')){
+        var goods=JSON.parse(localStorage.getItem('goods'));
+        if(goods.length>0){
+            var html='';
+          goods.forEach(function(item){
+          html+=`<div class="sc-pro-list clearfix">
+                      <label class="checkbox" >
+                          <input readonly="readonly" class="vam checked">
+                      </label>
+                      <div class="sc-pro-area">
+                          <div class="sc-pro-main clearfix">
+                              <a href="#" class="p-img">
+                                  <img src="${item.image}" alt="">
+                              </a>
+                              <ul>
+                                  <li>
+                                      <a href="#" class="p-name">${item.message}</a>
+                                      <p class="p-info">香槟金 全网通 4GB+64GB</p>
+                                      <div class="p-label">
+                                          <span>分期免息</span>
+                                      </div>
+                                  </li>
+                                  <li>
+                                      <div class="p-price">
+                                          <span>¥ ${item.price}</span>
+                                      </div>
+                                  </li>
+                                  <li>
+                                      <div class="p-stock">
+                                          <div class="p-stock-area">
+                                              <span class="p-stock-text">${item.num}</span>
+                                              <p class="p-stock-btn"> 
+                                                 <a href="#">+</a>
+                                                 <a href="#"></a>
+                                              </p>
+                                          </div>
+                                      </div>
+                                  </li>
+                                  <li class="p-price-total">
+                                    ¥${item.total}
+                                  </li>
+                                  <li>
+                                      <a href="#" class="p-del" code=${item.code}>删除</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                </div>`    
+  })
+  $('.sc-pro').html(html)
+}
+    }else{
+        console.log("没有数据");
+        $('.sc-pro').html('<p class="p1">你的购物车什么也没有哦</p>')
+    }
+//删除购物车的商品
+$('.p-del').on('click',function(){
+    var code=$('.p-del').attr('code')//商品对应的编号
+   goods.forEach(function(item,index){
+    if(code==item.code){
+        goods.splice(index,1)
+        return;
+    }
+   })
+   var jaonStr=JSON.stringify(goods);
+   localStorage.setItem('goods',jaonStr)
+   console.log(goods.length)
+   $(this).parent().remove();
+   alert('成功移除商品')
+   if(goods.length<=0){
+    $('.sc-pro').html('<p class="p1">你的购物车什么也没有哦</p>')
+   }
+})
+
+</script>
+</body>
+</html>

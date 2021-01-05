@@ -1,34 +1,54 @@
-  //banner图二级菜单  
-     $('.category-info').on('mouseover', function () {
-        $.ajax({
-            url: './js/banner.json',
-            method: 'get',
-            dataType: 'json',
-            success: function (data) {
 
-                data.forEach(function (item) {
-
+ //banner图二级菜单  
+    $('#li').on('mouseover',function(){
+         $.ajax({
+             url:"./js/banner1.json",
+             method:"get",
+             dataType:"json",
+             success:function(data){
+                 data.forEach(function(item){
                     $(`<li class="subcate-item">
-                       <a href="" class="nb">
-                        <img src="${item.img}"
-                            alt="">
-                        <p>
-                            <span>${item.series}</span>
-                        </p>
-                    </a>
-                  </li>`).appendTo($('.subcate-list'))
+                    <a href="" class="nb">
+                     <img src="${item.img}"
+                         alt="">
+                     <p>
+                         <span>${item.series}</span>
+                     </p>
+                 </a>
+                 </li>`).appendTo($('#ul'))
+                 })
+                 $('.div').css("display","block")
+                 $('#li').on('mouseout',function(){
+                     $('.div').css("display","none")
                 })
-                $('.category-info').on('mouseover', $('.category-panels'), function () {
-                    $(this).children()[2].style.display = "block";
-                })
-                $('.category-info').on('mouseout', $('.category-panels'), function () {
-                    $(this).children()[2].style.display = "none";
-                })
-
-            }
-
-        })
+             }
+         })
     })
+   //
+   $('#li1').on('mouseover',function(){
+    $.ajax({
+        url:"./js/banner2.json",
+        method:"get",
+        dataType:"json",
+        success:function(data){
+            data.forEach(function(item){
+               $(`<li class="subcate-item">
+               <a href="" class="nb">
+                <img src="${item.img}"
+                    alt="">
+                <p>
+                    <span>${item.series}</span>
+                </p>
+            </a>
+            </li>`).appendTo($('#ul1'))
+            })
+            $('.div1').css("display","block")
+            $('#li1').on('mouseout',function(){
+               $('.div1').css("display","none")
+           })
+        }
+    })
+})
     //mask
     $.ajax({
         url: './js/mask.json',
@@ -53,8 +73,8 @@
         success: function (data) {
 
             data.forEach(function (item) {
-                $(` <li class="grid-items pord">
-                    <a href="#">
+                $(` <li class="grid-items pord code=${item.code}">
+                    <a href="../html/shopping.html">
                         <p class="grid-img"><img src="${item.img}" alt=""></p>
                         <div class="grid-title">${item.model}</div>
                         <p class="grid-desc">${item.discounts} </p>
