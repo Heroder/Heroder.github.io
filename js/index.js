@@ -166,7 +166,7 @@
             data.forEach(function(item){
                 $(`
                 <li class="mou-gen">
-                     <a href="#" class="af">
+                     <a href="../html/shopping1.html" class="af">
                          <p class="grid-img">
                          <img src="${item.img}" alt="">
                         </p>
