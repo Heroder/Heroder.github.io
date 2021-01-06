@@ -189,14 +189,14 @@
                                           <div class="p-stock-area">
                                               <span class="p-stock-text">${item.num}</span>
                                               <p class="p-stock-btn"> 
-                                                 <a href="#">+</a>
-                                                 <a href="#"></a>
+                                                <span class="disabled">+</span>
+                                                <span class="disableb">-</span>
                                               </p>
                                           </div>
                                       </div>
                                   </li>
                                   <li class="p-price-total">
-                                    ¥${item.total}
+                                    ￥${item.total}
                                   </li>
                                   <li>
                                       <a href="#" class="p-del" code=${item.code}>删除</a>
@@ -207,11 +207,33 @@
                 </div>`    
   })
   $('.sc-pro').html(html)
-}
-    }else{
+}else{
         console.log("没有数据");
         $('.sc-pro').html('<p class="p1">你的购物车什么也没有哦</p>')
     }
+    }
+
+//增加
+
+/* $('.disabled').on('click',function(){
+   var num=parseInt($('.p-stock-text').text()) 
+   console.log(num)
+  /*  num++;
+   $('.p-stock-text').html(num)  */
+
+ /* $('.disabled').on('click',function(){
+         
+           
+    })
+    
+    $('.disableb').on('click',function(){
+         var num=$('.product-stock-text').text()
+         num--;
+         if(num<1){
+             num=1;
+         }
+         $('.product-stock-text').html(num)    
+    })  */
 //删除购物车的商品
 $('.p-del').on('click',function(){
     var code=$('.p-del').attr('code')//商品对应的编号
@@ -230,7 +252,28 @@ $('.p-del').on('click',function(){
     $('.sc-pro').html('<p class="p1">你的购物车什么也没有哦</p>')
    }
 })
+//
 
+
+$('.disabled').on('click',function(){
+  var that=$(this);
+  var num=$('.p-stock-text').text();
+  num++;
+  $('.p-stock-text').text(num);
+  var goods=JSON.parse(localStorage.getItem('goods'));
+  goods=JSON.stringify(goods);
+  localStorage.setItem('goods',goods);
+})
+$('.disableb').on('click',function(){
+  var that=$(this);
+  var num=$('.p-stock-text').text();
+  num--;
+  $('.p-stock-text').text(num);
+  var goods=JSON.parse(localStorage.getItem('goods'));
+  goods=JSON.stringify(goods);
+  localStorage.setItem('goods',goods);
+})
 </script>
 </body>
 </html>
+

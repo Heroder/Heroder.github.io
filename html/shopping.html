@@ -389,10 +389,10 @@
             <!-- 商品数量 -->
             <div class="product-operation">
                 <div class="product-stock">
-                    <input type="text" placeholder="1" value="1" class="product-stock-text">
+                    <span class="product-stock-text">1</span>
                     <p class="product-stock-btn">
-                        <a href="#" id="disabled">+</a>
-                        <a href="#" id="disableb">-</a>
+                       <span class="disabled">+</span>
+                       <span class="disableb">-</span>
                     </p>
                 </div>
                 <div class="pro-operation">
@@ -456,7 +456,24 @@
 	   small.onmouseout=function(){
 		   big.style.display="none"
 		   mask.style.display="none"
-	   }
+       }
+       
+    //
+  
+    $('.disabled').on('click',function(){
+         var num=$('.product-stock-text').text()
+         num++;
+         $('.product-stock-text').html(num)    
+    })
+    
+    $('.disableb').on('click',function(){
+         var num=$('.product-stock-text').text()
+         num--;
+         if(num<1){
+             num=1;
+         }
+         $('.product-stock-text').html(num)    
+    })
     //秒杀功能倒计时
     function toTime(){
         var time=new Date() //当前时间
@@ -482,7 +499,8 @@
     setInterval(toTime,1000)
 //  购物车
     $('.pro-operation').on('click',function(){
-       var num=parseInt($('.product-stock-text').val());
+       var num=parseInt($('.product-stock-text').text());
+       console.log(num)
        var price=parseInt($('.nrm').text())
        //总价
       var total=num*price;
