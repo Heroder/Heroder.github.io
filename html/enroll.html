@@ -35,7 +35,7 @@
                <span class="span1">手机号必须是11位的数字</span>
                <input type="text" placeholder=" 短信验证码">
                <input type="text" placeholder="密码" class="pw">
-               <span>密码必须是8-12的字母,数字或者特殊符号</span>
+               <span class="span2">密码必须是8-12的字母,数字或者特殊符号</span>
                <input type="text" placeholder="确认密码">
                <input type="text"  placeholder="出生日期" >
                <input type="button" value="注册" class="reg">
@@ -44,9 +44,8 @@
        
    </div>
   <script src="../js/jquery1.12.4.min.js"></script>
-  <!-- <script>
-      console.log( $('.phone'))
-      $('.phone').bind(function(){
+   <script>
+      $('.phone').on("input",function(){
         var reg=/^\w{8,11}$/;
        var the=$('.phone').val();
        if(reg.test(the)){
@@ -59,7 +58,23 @@
            return false;
        }
       })
-  </script> -->
+      $('.pw').on("input",function(){
+        var reg=/^\w{8,11}$/;
+       var the=$('.pw').val();
+       if(reg.test(the)){
+           $('.span2').text("符合要求")
+           $('.span2').css('background','greed')
+           return true;
+       }else{
+           $('.span2').text("不符合要求")
+           $('.span2').css('background','red')
+           return false;
+       }
+      })
+      /* $('.reg').on('click',function(){
+          
+      }) */
+  </script> 
   
  <script>
      $('.reg').click(function(){
