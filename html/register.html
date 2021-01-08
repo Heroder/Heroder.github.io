@@ -82,6 +82,23 @@
     </div>
     <script src="../js/jquery1.12.4.min.js"></script>
     <script>
+        $('.register').on('click',function(){
+            var phone=$('.cell-phone').val();
+            var password=$('.password').val();
+            var setphone=JSON.parse(localStorage.getItem('goods'))
+            if(phone==setphone.phone&&password==setphone.pw){
+                alert("您已成功登陆");
+                location.href = "../index.html";
+            }else if(phone!==setphone.phone&&password==setphone.pw){
+                alert("你的用户名有误");
+            }else if(phone==setphone.phone&&password!==setphone.pw){
+                alert("你的密码有误");
+            }else{
+                alert("你的用户名和密码有误");
+            }       
+        })
+    </script>
+   <!--  <script>
        $(".register").click(function(){
            $.ajax({
                url:"../js/enroll.json",
@@ -100,7 +117,7 @@
                 }
            })
        })
-    </script>
+    </script> -->
 </body>
 </html>
 

@@ -45,7 +45,7 @@
                 </li>
             </ul>
             <ul class="s-main">
-                <li><a href="./html/register.html">请登录</a></li>
+                <li><a href="./html/register.html" class="mst">请登录</a></li>
                 <li><a href="./html/enroll.html">注册</a></li>
                 <li><a href="#">我的订单</a></li>
                 <li class="menu-one">
@@ -732,6 +732,12 @@
                 el: '.swiper-scrollbar',
             },
         })
+        //
+        var good=JSON.parse(localStorage.getItem('goods'))
+        if(good){
+           $('.mst').html(good.phone)
+           console.log(good.phone)
+        }
     </script>
 
 

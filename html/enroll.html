@@ -44,7 +44,21 @@
        
    </div>
   <script src="../js/jquery1.12.4.min.js"></script>
-   <script>
+  <script>
+      $('.reg').on('click',function(){
+          var phone=$('.phone').val();
+          var pw=$('.pw').val();  
+          var mst={
+              phone:phone,
+              pw:pw
+          }
+          mst=JSON.stringify(mst);
+          localStorage.setItem('goods',mst);  
+          location.href = "./register.html"
+          alert('注册成功')                               
+      })
+  </script>
+  <!--  <script>
       $('.phone').on("input",function(){
         var reg=/^\w{8,11}$/;
        var the=$('.phone').val();
@@ -70,13 +84,11 @@
            $('.span2').css('background','red')
            return false;
        }
-      })
-      /* $('.reg').on('click',function(){
-          
-      }) */
+      }) -->
+     
   </script> 
   
- <script>
+ <!-- <script>
      $('.reg').click(function(){
         $.ajax({
             url:"../js/enroll.json",
@@ -96,7 +108,7 @@
             }
         })
      })
-  </script>
+  </script> -->
  
 
 
